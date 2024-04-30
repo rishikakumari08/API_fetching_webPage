@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+/* global css */
+
+.obj-width{
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* styling nav bar */
+nav{
+    background-color: rgb(26, 97, 97);
+    box-shadow: 0 7px 10px rgba(0,0,0,0.3);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0rem;
+}
+
+.navbar .logo{
+    color: whitesmoke;
+    font-size: 2rem;
+    margin-left: 3rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-shadow:0 7px 10px rgba(0,0,0,0.9) ;
+}
+
+.navbar #search-input{
+    /* we can set the width of search bar  */
+    max-width: 600px;
+    border: none;
+    border-radius: 3px;
+    /* here we set the padding 10px from top and bottom and 20px from left and right */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: darkolivegreen;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    box-shadow: 0 7px 5px rgba(0,0,0,0.3);
+}
+
+.navbar #search-button{
+      border: none;
+      padding: 10px 20px;
+      border-radius: 2px;
+      margin-right: 3rem;
+      font-size: 1rem;  
+      background-color: aqua; 
+      cursor: pointer;
+      box-shadow: 0 7px 5px rgba(0,0,0,0.3);
+}
+
+/* styling the cards */
+#bolg-container{
+    padding: 3rem 0;
+    display: flex;
+    justify-content:space-around;
+    align-items: flex-start;
+    /* it is used to maintain the boxing means it will wrap according to size */
+    flex-wrap: wrap;
+}
+
+.block-card{
+    width: 280px;
+    border:1px solid #2d4c50 ;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 10px;
+
+}
+
+/* now we set hower means if we click on the card so it will get shadow */
+.block-card:hover{
+    box-shadow: 4px 4px 10px rgba(0,0,0,0,1);
+}
+
+.block-card img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+.block-card h2{
+   font-size: 1.7rem;
+   color: #141414;
+   font-weight: 500;
+}
+
+.block-card p{
+    font-size: 1.1rem;
+    padding-top: 0.7rem;
+ }
+
+ /* to make the website responsive */
+  @media(max-width:500px) {
+    .navbar .logo{
+        font-size: 1.8rem;
+        margin-left:1rem;
+    }
+    .navbar #search-input {
+        max-width: 100px;
+        padding: 10px 0px;
+        margin:0px;
+      }
+      input::placeholder{
+        font-size: 0.8rem;
+      }
+      button::placeholder{
+        font-size: 0.8rem;
+      }
+      .navbar #search-button{
+        padding: 10px 10px;
+        margin-left: 2px;
+      }
+      .block-card {
+        width: 100%;
+        
+      }
+ } 
